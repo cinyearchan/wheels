@@ -8,7 +8,7 @@ $(function(){
 
 	var pageIndex = 0;
 	var isAnimateOver = false;
-    var timer;
+  var timer;
 
 	var imgCount = $imgs.length;
 	var imgWidth = $imgs.width();
@@ -20,14 +20,14 @@ $(function(){
 
 	$nextBtn.click(function(){
 		playNext(1);
-        clearTimer();
-        setNextTimer();
+    clearTimer();
+    setNextTimer();
 	});
 
 	$preBtn.click(function(){
 		playPre(1);
-        clearTimer();
-        setPreTimer();
+    clearTimer();
+    setPreTimer();
 	});
 
 	$bullets.click(function(){
@@ -85,21 +85,21 @@ $(function(){
 						.addClass('active');
 	}
     
-    function setPreTimer(){
-      timer = setInterval(function(){
-		playPre(1);
+  function setPreTimer(){
+    timer = setInterval(function(){
+			playPre(1);
 	  }, 3000);
-    }
+  }
 	
-    function setNextTimer(){
-      timer = setInterval(function(){
-		playNext(1);
+  function setNextTimer(){
+    timer = setInterval(function(){
+			playNext(1);
 	  }, 3000);
-    }
+  }
     
-    function clearTimer(){
-      clearInterval(timer); 
-    }
+  function clearTimer(){
+    clearInterval(timer); 
+  }
     
-    setNextTimer();
+  setNextTimer();
 });
