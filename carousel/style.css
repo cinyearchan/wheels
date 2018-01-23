@@ -1,0 +1,85 @@
+.carousel{
+	position: relative;
+	width: 320px;
+	height: 180px;
+	overflow: hidden;
+}
+
+.carousel ul,
+.carousel li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/* 去除鼠标悬浮图片的鼠标形状 */
+.carousel a{
+	cursor: auto;
+}
+
+.carousel .img-ct{
+	position: absolute;
+	/*width: 1280px;*/
+	/* 宽度不应该写死，应该由js控制 */
+	overflow: hidden;
+}
+
+.carousel .img-ct>li{
+	float: left;
+}
+
+.carousel .img-ct img{
+	width: 320px;
+	height: 180px;
+}
+
+.carousel .arrow{
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	line-height: 30px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	z-index: 1;
+}
+
+.carousel .arrow:hover{
+	cursor: pointer;
+	opacity: .8;
+}
+
+.carousel .pre{
+	left: 10px;
+}
+
+.carousel .next{
+	right: 10px;
+}
+
+.carousel .bullet{
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+	font-size: 0;
+}
+
+.carousel .bullet>li{
+	display: inline-block;
+	width: 30px;
+	height: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: 0 3px;
+}
+
+.carousel .bullet>li.active{
+	background-color: #ccc; 
+}
