@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>modal</title>
+</head>
+
+<body>
+  <input type="text" class="date-ipt" placeholder="有初始值" date-init="2018/06/05" name="">
+  <input type="text" class="date-ipt" placeholder="无初始值" name="">
+  <script type="text/javascript" src="../common/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+  function DatePicker($target) {
+    this.init($target)
+
+    this.render()
+
+    this.setData()
+
+    this.bind()
+  }
+
+  DatePicker.prototype = {
+    init: function($target) {
+      this.$target = $target
+
+      if (this.isValidDate($target.attr('date-init'))) {
+        this.date = new Date($target.attr('date-init'))
+        this.watchDate = new Date($target.attr('date-init'))
+      } else {
+        this.date = new Date()
+        this.watchDate = new Date()
+      }
+    },
+    // 渲染日历方法
+    render: function() {
+      var tpl = '<div class="ui-date-picker" style="display:none;">' +
+        '<div class="header"><span class="pre caret-left"></span><span class="next caret-right"></span></div>' +
+        '<table class="panel">' +
+        '<thead><tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr></thead>' +
+        '<tbody></tbody>' +
+        '</div>'
+      this.$datepicker = $(tpl)
+
+      this.$datepicker.insertAfter(this.$target)
+        .css({
+          'position': 'absolute',
+          'left': this.$target.offset().left,
+          'top': this.$target.offset().top + this.$target.height(true)
+        })
+    },
+
+    // 设置数据
+    setData: function() {
+
+    },
+
+    // 绑定
+    bind: function() {
+
+    },
+
+    // 验证
+    isValidDate: function() {
+
+    },
+
+    getFirstDay: function(date) {
+
+    },
+
+    getLastDay: function(date) {
+
+    },
+
+    getPreMonth: function(date) {
+
+    },
+
+    getNextMonth: function(date) {
+
+    },
+
+    getYYMMDD: function(date) {
+
+    },
+
+    toFixed: function(n) {
+
+    }
+  }
+  </script>
+</body>
+
+</html>
